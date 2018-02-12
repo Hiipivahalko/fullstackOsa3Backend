@@ -8,6 +8,7 @@ const cors = require('cors')
 app.use(bodyParser.json())
 app.use(morgan('tiny'))
 app.use(cors())
+app.use(express.static('build'))
 
 morgan.token('data', function(req, res) { 
     return JSON.stringify(req.body)
